@@ -19,7 +19,13 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.get('/', (require, response) => {
-  response.render('main', { list: ['a', 'b'], title: 'Welcome to the Jungle' });
+  response.render(
+    'main',
+    {
+      nav: [{ link: '/books', title: 'Books' }, { link: '/authors', title: 'Authors' }],
+      title: 'Jungle',
+    },
+  );
   // response.render('index', { list: ['a', 'b'] });
   // response.sendFile(path.join(`${__dirname}/views/index.html`));
 });
