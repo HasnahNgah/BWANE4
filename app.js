@@ -7,5 +7,5 @@ response.send('Hello World');
 });
 
 app.listen(3000, function(){
-    console.log('listening to a port' + chalk.redBright(' 3000'));
+    console.log(`listening to a port ${chalk.yellowBright(' 3000')}`);
 });
